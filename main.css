@@ -1,0 +1,78 @@
+header {
+  text-align: left center;
+  background-color: #ffb4b0;
+  height: 3em;
+  margin: 5px 0px 5px 0px;
+  border: solid 3px;
+}
+
+nav span {
+  color: black;
+  /* background-color: grey; */
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+}
+
+.selectArtist {
+  width: 130px;
+  height:24px;
+}
+
+a:hover {
+  color: grey;
+}
+
+/* a:visited {
+  color: brown;
+} */
+
+/* .artistBlock {
+  background: green ;
+  height: 50em;
+  border: solid black 1px;
+
+} */
+
+.controlBox {
+  float: left;
+  border: solid;
+  background-color: #4DD7FA  ;
+  margin: 0px 2em 10% 0px;
+  height: 20em;
+  width: 22%;
+  padding: 40px 20px;
+}
+legend {
+  margin-top: 15px;
+}
+.genreFS {
+  margin: 5px 0px 20px 0px;
+}
+
+.artistInfo {
+  color: #785616;
+  margin: 0px 0px 10px 29%;
+  width: 70%;
+  height: 25em;
+  border: solid black 3px;
+  background-color: #FEFAC0  ;
+  padding: 0px;
+  /* background-color: grey; */
+  /*margin: 10px 75% 20% 20px;*/
+  /* padding: 40px 20px; */
+}
+
+.artistInfo ul li{
+  display: inline-block;
+  margin:0px 0px 0px 20px;
+ /* background-color: grey; */
+}
+
+.artistInfo h1 {
+  display: inline-block;
+  margin: 10px 0px 0px 40px;
+ /* background-color: grey; */
+}
