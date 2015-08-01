@@ -49,6 +49,7 @@ legend {
   margin-top: 15px;
 }
 .genreFS {
+  float: left;
   margin: 5px 0px 20px 0px;
 }
 
