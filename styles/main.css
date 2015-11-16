@@ -1,53 +1,25 @@
-header {
-  margin-top: 50px; }
+.bordered {
+  border: 1px solid black; }
 
-body {
-  color: #000000;
-  background-color: grey; }
+.padded--small {
+  padding: 5px 5px 5px 5px; }
 
-li {
-  display: inline-block;
-  text-align: left; }
+.padded--medium {
+  padding: 15px 15px 15px 15px; }
 
-a {
-  color: blue; }
+.padded--large {
+  padding: 40px 40px 40px 40px; }
 
-a:hover {
-  color: grey; }
+.separation--top {
+  margin: 20px 0 0 0; }
 
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 50px;
-  background-color: #00a087;
-  margin: 0px 0px 15px 0px;
-  background-color: #FFB4B0;
-  border-style: solid black;
-  border-width: 2px;
-  border-color: #000000; }
+.hidden {
+  display: none; }
 
-#inputBox {
-  background-color: #4DD7FA;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #000000;
-  margin-top: 40px; }
+.input--wide {
+  min-width: 250px; }
 
-#dropdownMenu1 {
-  margin: 20px; }
-
-#clearFilter {
-  margin: 20px; }
-
-#outputBox {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #000000;
-  background-color: #FEFAC0;
-  margin: 40px 0px 0px 0px;
-  overflow: scroll; }
+.nav-search-field {
+  margin-right: 200px; }
 
 /*# sourceMappingURL=main.css.map */

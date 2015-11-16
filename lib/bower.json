@@ -2,7 +2,7 @@
   "name": "templates",
   "version": "0.0.0",
   "authors": [
-    "Steve Brownlee <chortlehoort@gmail.com>"
+    ""
   ],
   "license": "MIT",
   "ignore": [
@@ -13,13 +13,18 @@
     "tests"
   ],
   "dependencies": {
+    "angular": "*",
+    "angular-filter": "~0.5.5",
+    "angular-route": "~1.4.5",
+    "angularfire": "~1.1.2",
     "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
-    "handlebars": "~3.0.3",
+    "firebase": "~2.2.9",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
-    "material-design": "*",
-    "require-handlebars-plugin": "~0.11.3",
-    "requirejs": "~2.1.20"
+    "oauth-js": "~0.4.3",
+    "q": "~2.0.2",
+    "requirejs": "~2.1.20",
+    "requirejs-babel": "~0.0.7"
   }
 }
