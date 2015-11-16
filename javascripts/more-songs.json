@@ -1,20 +1,15 @@
 {
-  "songs": [
-    {
-      "name":"Rather Be",
-      "album": {
-        "name": "Rather Be",
-        "year": 2015
-      },
-      "artist": "Silent Bandit"
-    },
-    {
-      "name":"The Walk",
-      "album": {
-        "name": "How Do You Do",
-        "year": 2012
-      },
-      "artist": "Mayer Hawthorne"
-    }
-  ]
+    "songs": [
+        {
+            "title": "Steam Powered Aeroplane",
+            "artist" : "New Grass Revival",
+            "album" : "Commonwealth"
+        },
+
+        {
+            "title" : "One Of These Nights",
+            "artist" : "The Eagles",
+            "album" : "On Of These Nights"
+        }
+    ]
 }

@@ -1,23 +1,149 @@
-requirejs.config({
-  baseUrl: './javascripts',
-  paths: {
-    'jquery': '../bower_components/jquery/dist/jquery.min',
-    'hbs': '../bower_components/require-handlebars-plugin/hbs',
-    'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min',
-    'material': '../bower_components/bootstrap-material-design/dist/js/material.min'
-  },
-  shim: {
-    'bootstrap': ['jquery'],
-    'material': ['bootstrap']
-  }
+// Brian
+$(document).ready(function() {
+    console.log("CallBack function");
+// Capture the delete button clicks and ...
+      $("div").on("click", "button", function() {
+             console.log( "You Clicked" + this);
+             var element = document.getElementById("this.containerId");
+            element.parentNode.removeChild(element);
+
+            // var song = $(this);
+            // console.log("song#= ",song);
+            // console.log($(".container").attr("index"));
+        });
+
+
+
+
+    function songCallBack(songList) {
+         for (var i = 0; i < songList.songs.length; i++) {
+            var currentSong = songList.songs[i];
+// build string to append as a variable first to avoud browser issues
+            var appendString = '<div class="container" id="container-'+ i + '"><h2>' + currentSong.title + '</h2>';
+            appendString += "Performed by " + "<inline><i>" + currentSong.artist + "</i></inline>   ";
+            appendString += "<button id='button-" + i + "' >Delete</button>";
+            appendString += "</div>";
+            $("#allMySongs").append(appendString);
+
+            console.log(document);
+            console.log("Context of callBackFunction is ", $(this));
+        }
+    }
+
+     $.ajax({
+         url:"./javascripts/songs.json"
+     }).done(songCallBack);
+
+     $("#getMoreSongs").click(function () {
+         $.ajax({
+             url:"./javascripts/moreSongs.json"
+         }).done(songCallBack);
+     });
+
+
+
+
+
+
+
+
 });
 
-requirejs(
-  ["jquery", "hbs", "bootstrap", "material", "loadSongs"],
-  function($, Handlebars, bootstrap, material, loadSongs) {
-    // var moreSongsLoaded = false;
 
-    $.material.init();
+
+
+// $(document).ready(function() {
+//     //*** All the Jquery  methods go Here ***
+//     console.log(this);
+//     console.log("CallBack function");
+//     songCallBack;
+
+
+// // Capture the delete button clicks and ...
+//       $(document).on("click", "#song" + $(this), function() {
+//             console.log( "You Clicked" + $(this));
+//             var song = "#song" + $(this);
+//             console.log("song#= ",song);
+//             return song;
+//         };
+
+// // Parse a songList file and insert it in the DOM
+//     function songCallBack(songList) {
+//          for (var i = 0; i < songList.songs.length; i++) {
+//             var currentSong = songList.songs[i];
+//             $("#allMySongs").append('<div id="song' + i  + '">');
+//             $("#allMySongs").append("<h1>" + currentSong.title + "</h1>");
+//             $("#allMySongs").append("<h3>Performed by " + "</h3>" + "<h2>" + currentSong.artist + "</h2>");
+//             $("#allMySongs").append.('<button id="button' + i + '" >Delete</button></div>');
+//          }
+
+
+
+//   });
+
+
+
+// // Ajax loads the first song file and when "done" it calls the function "songCallBack"
+//      $.ajax({
+//          url:"./javascripts/songs.json"
+//      }).done(songCallBack);
+
+
+// // When the "getMoreSongs" Button is clicked, process the next song file.
+//      $("#getMoreSongs").click(function () {
+//          $.ajax({
+//              url:"./javascripts/moreSongs.json"
+//          }).done(songCallBack);
+
+// // *** Declare all Functions Here ***
+
+
+
+
+
+
+
+
+
+//      });
+
+
+
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// requirejs.config({
+//   baseUrl: './javascripts',
+//   paths: {
+//     'jquery': '../bower_components/jquery/dist/jquery.min',
+//     'hbs': '../bower_components/require-handlebars-plugin/hbs',
+//     'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min',
+//     'material': '../bower_components/bootstrap-material-design/dist/js/material.min'
+//   },
+//   shim: {
+//     'bootstrap': ['jquery'],
+//     'material': ['bootstrap']
+//   }
+// });
+
+// requirejs(
+//   ["jquery", "hbs", "bootstrap", "material", "loadSongs"],
+//   function($, Handlebars, bootstrap, material, loadSongs) {
+//     // var moreSongsLoaded = false;
+
+//     $.material.init();
 
 
     // console.log("adding a click event handle for the more songs button");
