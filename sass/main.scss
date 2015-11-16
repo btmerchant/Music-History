@@ -1,49 +1,103 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #666;
+$font-stack: Helvetica, sans-serif;
+$primary-color: #000000;
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+header {
+    margin-top: 50px;
+    margin-left: 5%;
 }
 
-@mixin bordered($size:1px) {
-  border: $size solid black;
+#backing:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #aaaaaa;
+    // background-image: url('../imgs/DSCF3275.jpg');
+    background-size: 100% auto;
+    height:100vh;
+    width: 100vw;
+    opacity : 0.5;
+    z-index: -1;
 }
 
-@mixin padded($size:5px) {
-  padding: $size $size $size $size;
+body {
+
 }
 
-.bordered {
-  @include bordered();
+// @mixin border-redius($radius) {
+//     -webkit-border-radius: $radius;
+//         -moz-border-radius: $radius;
+//             -ms-border-radius:$radius;
+//                   border-radius:$radius;
+//     }
+
+// #displayPrice {
+//     @include border-redius(30px);
+//     background-color: grey;
+//     padding: 10px;
+//     width: 250px;
+// }
+
+
+li {
+    display: inline-block;
+    text-align: left;
 }
 
-.padded--small {
-  @include padded(5px);
+a {
+    color: blue;
 }
 
-.padded--medium {
-  @include padded(15px);
+ a:hover {
+        color: grey;
+ }
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    background-color: #00a087;
+    margin: 0px 0px 15px 0px;
+    background-color: #FFB4B0;
+    border-style: solid black;
+    border-width: 2px;
+    border-color: #000000;
 }
 
-.padded--large {
-  @include padded(40px);
+#inputBox {
+    max-width: 25%;
+    max-height: 400px;
+    padding: 40px 10px 10px 10px;
+    background-color: #4DD7FA;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+    margin-top: 40px;
 }
 
-.separation--top {
-  margin: 20px 0 0 0;
+#dropdownMenu1 {
+    margin: 20px;
 }
 
-.hidden {
-  display: none;
+#clearFilter {
+    margin: 20px;
 }
 
-.input--wide {
-  min-width: 250px;
+#outputBox {
+    padding: 20px 10px 30px 10px;
+    max-height: 400px;
+    max-width: 55%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+    background-color: #FEFAC0 ;
+    margin: 40px 0px 0px 0px;
+    overflow: scroll;
 }
-
-.nav-search-field {
-  margin-right: 200px;
+#mainTitle {
+  margin-left: 2%;
 }
