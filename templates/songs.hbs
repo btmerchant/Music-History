@@ -1,15 +1,10 @@
-{{#each songs}}
-  <h2>{{title}}</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      {{artist}}  -
-    </div>
-        <div class="col-sm-4">
-          <i>{{album.name}}</i>
-        </div>
-        <div class="col-sm-4">
-          <a href="#" id="edit#{{key}}">Edit</a>
-          <a href="#" id="delete{{key}}">Delete</a>
-        </div>
+<div class="">
+  {{#each songs}}
+  <div>
+    <h3>{{name}} ({{album.year}})</h3>
+    Performed by {{artist}} on the album {{album.name}}
   </div>
-{{/each}}
+  {{/each}}
+
+  <button id="loadMoreSongs" class="separation--top">Load More &gt;</button>
+</div>

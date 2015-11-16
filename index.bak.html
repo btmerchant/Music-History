@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History 7</title>
+  <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body ng-app="MasterApp">
+  <section ng-controller="MasterCtrl">
+    <header>
+      <div class="container">
+        <div class="nav nav-pills">
+          <ul>
+            <li><a href="">View Music</a></li>
+            <li><a href="./songForm.html">Add Music</a></li>
+            <li><a href="">Profile</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container" id="mainTitle">
+        <h1>Music History 5</h1>
+        {{5 + 5}}
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2" id="inputBox">Input Box
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-3 padded--large">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle btn-material-red-400" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Artists<span class="caret"></span></button>
+                      <ul id="artists" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="dropdown">
+                      <button class="btn btn-material-red-400 dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Albums<span class="caret"></span></button>
+                      <ul id="albums" class="dropdown-menu" aria-labelledby="dropdownMenu1"></ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" id="clearFilter" class="btn btn-info">Clear Filter</button>
+              </div>
+              <div class="col-sm-9 padded--medium">
+                <div id="songList">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1" ng-view></div>
+        <div class="col-md-9" id="outputBox" ng-CallApp>
+      </div>
+    </div>
+  </div>
+  </section>
+  <script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascripts/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+{
+    "songs": [
+         {
+            "id": "1",
+            "title" : "Bend In The River",
+            "artist" : "Fade2Blue",
+            "album": {
+                "name": "Wasting Time",
+                "year": 2014
+            }
+        },
+
+        {
+            "id": "2",
+            "title": "It's Just A Thought",
+            "artist" : "Creedence Clearwater Revival",
+            "album": {
+                "name": "Pendulum",
+                "year": 2014
+            }
+        },
+
+        {
+            "id": "3",
+            "title" : "The Weight",
+            "artist" : "The Band",
+            "album": {
+                "name": "Cripple Creek",
+                "year": 2014
+            }
+        },
+
+         {
+            "id": "4",
+            "title" : "Cruzin The Parkway",
+            "artist" : "Fade2Blue",
+            "album": {
+                "name": "Climbing The Walls",
+                "year": 2014
+            }
+        },
+
+          {
+            "id": "5",
+            "title": "Steam Powered Aeroplane",
+            "artist" : "New Grass Revival",
+            "album": {
+                "name": "Commonwealth",
+                "year": 2014
+            }
+        },
+
+        {
+            "id": "6",
+            "title" : "One Of These Nights",
+            "artist" : "The Eagles",
+            "album": {
+                "name": "One Of These Nights",
+                "year": 2014
+            }
+        },
+
+         {
+            "id": "7",
+            "title" : "Maggie Valley Lament",
+            "artist" : "Fade2Blue",
+            "album": {
+                "name": "Wasting Time",
+                "year": 2014
+            }
+        }
+
+    ]
+}

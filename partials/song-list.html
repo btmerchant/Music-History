@@ -1,18 +1,10 @@
-<div class="song-list container-fluid">
-  <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 padded--large">
-      <div ng-repeat="song in songList.songs | filter: query">
-        <h3>{{song.name}} ({{song.album.year}})</h3>
-        Performed by {{song.artist}} on the album {{song.album.name}}
-        <div class="row">
-          <div class="col-sm-12">
-            <a href="#" ng-click="editSong(song)">Edit</a> | 
-            <a href="#" ng-click="deleteSong(song)">Delete</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-2"></div>
-  </div>
+<div>
+  <input type="text" ng-model="query" />
+</div>
+
+<div class="songsList" ng-repeat="song in song_list | filter: query">
+  <a href="#/songs/{{ song.$id }}">{{ song.title }}</a>
+</div>
+<div>
+  {{ error }}
 </div>
