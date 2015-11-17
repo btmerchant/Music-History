@@ -5,41 +5,48 @@ app.config(['$routeProvider',
     $routeProvider
       .when('/songs/list', {
         templateUrl: 'partials/song-list.html',
-        controller: 'SongCtrl'
+        controller: 'SongCtrl as bully'
       })
       .when('/songs/new', {
         templateUrl: 'partials/song-form.html',
         controller: 'AddSongCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
   }]);
 
-app.controller("SongCtrl",[
-  "$scope",
-  "$firebaseArray",
-  function($scope, $firebaseArray) {
-    var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
-    $scope.song_list = $firebaseArray(ref);
-    console.log("Firebase",$scope.songs);
-    }
-  ]);
+
+
+// app.controller("SongCtrl",[
+//   "$scope",
+//   "$firebaseArray",
+//   function($scope, $firebaseArray) {
+//     var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
+//     $scope.song_list = $firebaseArray(ref);
+//     console.log("Firebase",$scope.songs);
+//     }
+//   ]);
+
+
 
 app.controller("AddSongCtrl",[
-    "$scope",
     "$firebaseArray",
-    function($scope, $firebaseArray ) {
+    function($firebaseArray ) {
       var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
-      $scope.songs = $firebaseArray(ref);
-      $scope.newSong = {};
+      this.songs = $firebaseArray(ref);
+      this.newSong = {};
 
-      $scope.addSong = function() {
-        $scope.songs.$add({
-          artist: $scope.newSong.artist,
-          title: $scope.newSong.title
+      this.addSong = function() {
+        this.songs.$add({
+          artist: this.newSong.artist,
+          title: this.newSong.title
           // album: {
-          //   name: $scope.newSong.name,
-          //   year: $scope.newSong.year
+          //   name: this.newSong.name,
+          //   year: this.newSong.year
           // }
-        });
+        // Use .bind when "this" is used instead of $scope in a function!
+        }.bind(this));
         console.log("Addsong", $scope.songs_list);
         // console.log("SongList", $firebaseArray.songList);
         // $scope.$apply();
@@ -47,6 +54,35 @@ app.controller("AddSongCtrl",[
     }
   ]
 );
+
+// app.controller("AddSongCtrl",[
+//     "$scope",
+//     "$firebaseArray",
+//     function($scope, $firebaseArray ) {
+//       var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
+//       $scope.songs = $firebaseArray(ref);
+//       $scope.newSong = {};
+
+//       $scope.addSong = function() {
+//         $scope.songs.$add({
+//           artist: $scope.newSong.artist,
+//           title: $scope.newSong.title
+//           // album: {
+//           //   name: $scope.newSong.name,
+//           //   year: $scope.newSong.year
+//           // }
+//         });
+//         console.log("Addsong", $scope.songs_list);
+//         // console.log("SongList", $firebaseArray.songList);
+//         // $scope.$apply();
+//       };
+//     }
+//   ]
+// );
+
+
+
+
 
 
 
