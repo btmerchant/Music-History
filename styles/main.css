@@ -40,9 +40,10 @@ body {
   background-center: center fixed;
   background-size: cover; }
 
-li {
+body header ul li {
   display: inline-block;
-  text-align: left; }
+  text-align: left;
+  background-color: white; }
 
 a {
   color: blue; }

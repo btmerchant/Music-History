@@ -48,17 +48,17 @@ body {
 //     width: 250px;
 // }
 
-
-li {
+body header ul li{
     display: inline-block;
     text-align: left;
+    background-color: white;
 }
 
 a {
     color: blue;
 }
 
- a:hover {
+a:hover {
         color: grey;
  }
 

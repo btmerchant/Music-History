@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music History w/Angular</title>
+  <title>Music History 8</title>
   <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body ng-app="SongApp">
-<div id="backing">
-  <header>
-    <h1>Music History 8</h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#/songs/list">List Songs</a></li>
-      <li><a href="#/songs/new">Add Songs</a></li>
-    </ul>
-  </header>
+ <span ng-include="'partials/nav-bar.html'"></span>
   <div class="container">
     <section ng-controller="SongCtrl">
       <main class="uiContainer row">
@@ -35,61 +27,8 @@
   <script src="lib/bower_components/firebase/firebase.js"></script>
   <script src="lib/bower_components/angularfire/dist/angularfire.js"></script>
   <script src="app/app.js"></script>
+  <script src="app/authenticate.js"></script>
   <script src="app/controllers/songCtrl.js"></script>
   <script src="app/controllers/addSongCtrl.js"></script>
-  <script src="app/authenticate.js"></script>
-  </div>
-</body>
-</html><!-- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History 7</title>
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
-<body ng-app="SongApp">
-<header><h1>Music History 7</h1></header>
-  <div ng-controller="SongCtrl">
-    <div ng-view></div>
-  </div>
-  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="lib/bower_components/angular/angular.min.js"></script>
-  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
-  <script src="javascripts/app.js"></script>
 </body>
 </html>
- -->
-
-
-
-
-
-
-<!-- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History 7</title>
-  <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
-<body ng-app="SongApp">
-<div class="container">
-  <section ng-Controller="SongListCtrl">
-    <div>
-      <input type="text" ng-model="query" />
-    </div>
-    <div ng-repeat="song in songs | filter: query">
-      <a href="#/songs/{{ song.id }}">{{ song.title }}</a>
-    </div>
-  </section>
-</div>
- <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="lib/bower_components/angular/angular.min.js"></script>
-  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
-  <script src="app/app.js"></script>
-  <script src="app/controllers/SongCtrl.js"></script>
-</body>
-</html>
- -->

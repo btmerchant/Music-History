@@ -16,20 +16,6 @@ app.config(['$routeProvider',
       });
   }]);
 
-
-
-// app.controller("SongCtrl",[
-//   "$scope",
-//   "$firebaseArray",
-//   function($scope, $firebaseArray) {
-//     var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
-//     $scope.song_list = $firebaseArray(ref);
-//     console.log("Firebase",$scope.songs);
-//     }
-//   ]);
-
-
-
 app.controller("AddSongCtrl",[
     "$firebaseArray",
     function($firebaseArray ) {
@@ -55,6 +41,18 @@ app.controller("AddSongCtrl",[
   ]
 );
 
+// app.controller("SongCtrl",[
+//   "$scope",
+//   "$firebaseArray",
+//   function($scope, $firebaseArray) {
+//     var ref = new Firebase('https://music-history-btm.firebaseio.com/songs');
+//     $scope.song_list = $firebaseArray(ref);
+//     console.log("Firebase",$scope.songs);
+//     }
+//   ]);
+
+
+
 // app.controller("AddSongCtrl",[
 //     "$scope",
 //     "$firebaseArray",
@@ -79,17 +77,6 @@ app.controller("AddSongCtrl",[
 //     }
 //   ]
 // );
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Music History App refactored using Angular
